@@ -2,189 +2,251 @@
 	contentType="text/html;charset=GBK" pageEncoding="GBK"%>
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>爱尚水网络订水系统</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="styles.css" rel="stylesheet" type="text/css" media="screen" />
+<title>爱尚水订水网</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!--- start-mmmenu-script---->
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
+<script type="text/javascript" src="js/jquery.mmenu.js"></script>
+<script type="text/javascript">
+	//	The menu on the left
+	$(function() {
+		$('nav#menu-left').mmenu();
+	});
+</script>
+<!-- start slider -->
+<link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/jquery.eislideshow.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#ei-slider').eislideshow({
+			animation : 'center',
+			autoplay : true,
+			slideshow_interval : 3000,
+			titlesFactor : 0
+		});
+	});
+</script>
+<!-- start top_js_button -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event) {
+			event.preventDefault();
+			$('html,body').animate({
+				scrollTop : $(this.hash).offset().top
+			}, 1200);
+		});
+	});
+</script>
 </head>
 <body>
-	<!-- header -->
-	<jsp:include page="page_elements_jsp/home_top.jsp"></jsp:include>
-	<div id="wrap">
-		<!-- menu -->
-		<jsp:include page="page_elements_jsp/menu.jsp"></jsp:include>
+	<!-- start header -->
+	<jsp:include page="jsp/header.jsp"></jsp:include>
+	<!-- start header_btm -->
 
-		<!-- images view -->
-		<div id="prew_img">
+	<!-- start slider -->
+	<div class="slider">
+		<!---start-image-slider---->
+		<div class="image-slider">
+			<div class="wrapper">
+				<div id="ei-slider" class="ei-slider">
+					<ul class="ei-slider-large">
+						<li><img src="images/slider-image1.jpg" alt="意大利Vorice" />
+							<div class="ei-title">
+								<h3 class="btn">14.99元/箱/箱</h3>
+								<h2>
+									意大利Vorice<br> 全新上市
+								</h2>
+								<h3 class="active">
+									意大利Vorice<br> 沃斯特中央新风
+								</h3>
+								<h3>
+									<a class="ei_icons" href="details.jsp"><img
+										src="images/icon_1.png" alt=""></a> <a class="ei_icons"
+										href="details.jsp"><img src="images/icon_2.png" alt=""></a>
+									<a class="ei_icons" href="details.jsp"><img
+										src="images/icon_3.png" alt=""></a> <a class="ei_icons"
+										href="details.jsp"><img src="images/icon_4.png" alt=""></a>
+								</h3>
+							</div></li>
+						<li><img src="images/slider-image2.jpg" alt="image01" />
+							<div class="ei-title">
+								<h3 class="btn">14.99元/箱/箱</h3>
+								<h2>
+									农夫山泉 <br> 2016 全新上市
+								</h2>
+								<h3 class="active">
+									农夫山泉 有点甜<br> 我们只是大自然的搬运工
+								</h3>
+								<h3>
+									<a class="ei_icons" href="details.jsp"><img
+										src="images/icon_1.png" alt=""></a> <a class="ei_icons"
+										href="details.jsp"><img src="images/icon_2.png" alt=""></a>
+									<a class="ei_icons" href="details.jsp"><img
+										src="images/icon_3.png" alt=""></a> <a class="ei_icons"
+										href="details.jsp"><img src="images/icon_4.png" alt=""></a>
+								</h3>
+							</div></li>
+						<li><img src="images/slider-image3.jpg" alt="image02" />
+							<div class="ei-title">
+								<h3 class="btn">14.99元/箱</h3>
+								<h2>
+									帕米尔 <br> 2016 全新上市
+								</h2>
+								<h3 class="active">
+									帕米尔<br> 来自雪山的味道
+								</h3>
+								<h3>
+									<a class="ei_icons" href="details.jsp"><img
+										src="images/icon_1.png" alt=""></a> <a class="ei_icons"
+										href="details.jsp"><img src="images/icon_2.png" alt=""></a>
+									<a class="ei_icons" href="details.jsp"><img
+										src="images/icon_3.png" alt=""></a> <a class="ei_icons"
+										href="details.jsp"><img src="images/icon_4.png" alt=""></a>
+								</h3>
+							</div></li>
+						<li><img src="images/slider-image4.jpg" alt="image03" />
+							<div class="ei-title">
+								<h3 class="btn">14.99元/箱</h3>
+								<h2>
+									驿马源<br> 2016 全新上市
+								</h2>
+								<h3 class="active">
+									驿马源<br>来自地下千米岩石层,终于与你相见
+								</h3>
+								<h3>
+									<a class="ei_icons" href="details.jsp"><img
+										src="images/icon_1.png" alt=""></a> <a class="ei_icons"
+										href="details.jsp"><img src="images/icon_2.png" alt=""></a>
+									<a class="ei_icons" href="details.jsp"><img
+										src="images/icon_3.png" alt=""></a> <a class="ei_icons"
+										href="details.jsp"><img src="images/icon_4.png" alt=""></a>
+								</h3>
+							</div></li>
 
-			<ul class="round">
-				<li><img src="images/header1.jpg" alt="" /></li>
-				<li><img src="images/header2.jpg" alt="" /></li>
-				<li><img src="images/header3.jpg" alt="" /></li>
-				<li><img src="images/header4.png" alt="" /></li>
-				<li><img src="images/header5.jpg" alt="" /></li>
-				<li><img src="images/header6.jpg" alt="" /></li>
-			</ul>
-			<script type="text/javascript" src="lib/jquery.js"></script>
-			<script type="text/javascript" src="lib/jquery.roundabout.js"></script>
-			<script type="text/javascript">
-				$(document).ready(function() {
-					$('.round').roundabout({autoplay:true,autoplayDuration : 3000});
-				});
-			</script>
-
+						<li><img src="images/slider-image5.jpg" alt="image05" />
+							<div class="ei-title">
+								<h3 class="btn">14.99元/箱</h3>
+								<h2>
+									依云矿泉水<br> 2016 全新上市
+								</h2>
+								<h3 class="active">
+									依云矿泉水<br> Lorem 零污染 &nbsp;零人工接触
+								</h3>
+								<h3>
+									<a class="ei_icons" href="details.jsp"><img
+										src="images/icon_1.png" alt=""></a> <a class="ei_icons"
+										href="details.jsp"><img src="images/icon_2.png" alt=""></a>
+									<a class="ei_icons" href="details.jsp"><img
+										src="images/icon_3.png" alt=""></a> <a class="ei_icons"
+										href="details.jsp"><img src="images/icon_4.png" alt=""></a>
+								</h3>
+							</div></li>
+						<li><img src="images/slider-image6.jpg" alt="image04" />
+							<div class="ei-title">
+								<h3 class="btn">14.99元/箱</h3>
+								<h2>
+									玉龙山<br> 2016 全新上市
+								</h2>
+								<h3 class="active">
+									玉龙山 矿泉水&nbsp;纯净水<br>来自玉龙山的味道
+								</h3>
+								<h3>
+									<a class="ei_icons" href="details.jsp"><img
+										src="images/icon_1.png" alt=""></a> <a class="ei_icons"
+										href="details.jsp"><img src="images/icon_2.png" alt=""></a>
+									<a class="ei_icons" href="details.jsp"><img
+										src="images/icon_3.png" alt=""></a> <a class="ei_icons"
+										href="details.jsp"><img src="images/icon_4.png" alt=""></a>
+								</h3>
+							</div></li>
+						<li><img src="images/slider-image7.png" alt="image07" />
+							<div class="ei-title">
+								<h3 class="btn">14.99元/箱</h3>
+								<h2>
+									益力 <br> 2016 全新上市
+								</h2>
+								<h3 class="active">
+									益力伴您<br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;清凉一下
+								</h3>
+								<h3>
+									<a class="ei_icons" href="details.jsp"><img
+										src="images/icon_1.png" alt=""></a> <a class="ei_icons"
+										href="details.jsp"><img src="images/icon_2.png" alt=""></a>
+									<a class="ei_icons" href="details.jsp"><img
+										src="images/icon_3.png" alt=""></a> <a class="ei_icons"
+										href="details.jsp"><img src="images/icon_4.png" alt=""></a>
+								</h3>
+							</div></li>
+					</ul>
+					<!-- ei-slider-large -->
+					<ul class="ei-slider-thumbs">
+						<li class="ei-slider-element">Current</li>
+						<!-- one -->
+						<li><a href="#"> <span class="active">意大利Vorice</span>
+								<p>现价 14.99元/箱</p>
+						</a> <img src="images/thumbs/1.png" alt="thumb01" /></li>
+						<!-- two -->
+						<li class="hide"><a href="#"><span>农夫山泉</span>
+								<p>现价 14.99元/箱</p> </a><img src="images/thumbs/2.png" alt="thumb01" /></li>
+						<!-- three -->
+						<li class="hide1"><a href="#"><span>帕米尔</span>
+								<p>现价 14.99元/箱</p></a><img src="images/thumbs/3.png" alt="thumb02" /></li>
+						<!-- four -->
+						<li class="hide1"><a href="#"><span>驿马源</span>
+								<p>现价 14.99元/箱</p> </a><img src="images/thumbs/4.png" alt="thumb03" /></li>
+						<!-- five -->
+						<li><a href="#"><span>玉龙山</span>
+								<p>现价 14.99元/箱</p></a><img src="images/thumbs/5.png" alt="thumb04" /></li>
+						<!-- six -->
+						<li><a href="#"><span>依云</span>
+								<p>现价 14.99元/箱</p> </a><img src="images/thumbs/6.png" alt="thumb05" /></li>
+						<!-- seven -->
+						<li><a href="#"><span>益力</span>
+								<p>现价 14.99元/箱</p> </a><img src="images/thumbs/7.png" alt="thumb07" /></li>
+					</ul>
+					<!-- ei-slider-thumbs -->
+				</div>
+				<!-- ei-slider -->
+			</div>
+			<!-- wrapper -->
 		</div>
-		<!-- close prew_img -->
-		<div id="content_top"></div>
-		<div id="content_bg_repeat">
-			<div class="inside">
-				<div class="row-1 outdent">
-					<div class="wrapper">
-						<div class="metam1">
-							<!-- .box1 -->
-							<div class="box1">
-								<h2>高质量的水源</h2>
-								<div class="img-box">
-									<img src="images/img1.jpg" alt="" />我们的水源都来自未受污染的山区,为您的安全饮水把好第一关
-								</div>
-								<div class="wrapper">
-									<img class="img-indent" src="images/img2.jpg" alt="" />
-									提供安全放心的水质是我们企业的最基本也是最重要的要求
-								</div>
-							</div>
-							<!-- /.box1 -->
-						</div>
-						<div class="metam2">
-							<!-- .box1 -->
-							<div class="box1">
-								<h2>强有力的质检</h2>
-								<h4>水为生命之源，对于社会及经济发展也具有举足轻重的作用，水质检测是保证水质安全的重要手段。PONY谱尼测试集团集团在水质检测方面具有CNAS和CMA资质,检测报告得到71个国家认可，具有国际公信力。</h4>
-								<p>我们的每一桶矿泉水都经过了国家监测以及LCAS认证</p>
-								<a href="#" class="read">Read more</a>
-							</div>
-							<!-- /.box1 -->
-						</div>
-						<div class="metam3">
-							<!-- .box1 -->
-							<div class="box1">
-								<h2>完善的售后保障</h2>
-								<h4>
-									我们公司对每一位消费者提供全方位的服务,我们的宗旨是<font color="red">用户至上、 保障及时、
-										服务热情、 工作有效</font>并保证一下服务:
-								</h4>
-								<ul class="list1">
-									<li>&gt; 全天候提供国际标准水质检测</li>
-									<li>&gt; 假一赔十的质量保证</li>
-									<li>&gt; 快速一站式物流</li>
-								</ul>
-								<a href="#" class="read">Read more</a>
-							</div>
-							<!-- /.box1 -->
-						</div>
-					</div>
-				</div>
-				<div class="row-2">
-					<div class="wrapper">
-						<div class="metam1">
-							<!-- .box1 -->
-							<div class="box1">
-								<h2>一流的物流</h2>
-								<div class="img-box">
-									<img src="images/wl1.png" alt="" />
-									我们的矿泉水都是在半封闭环境下存储,避免阳光直射,避免在存储过程中的水质污染.
-								</div>
-								<div class="wrapper">
-									<img class="img-indent" src="images/wl2.jpg" alt="" />
-									我们提供直销,一站式的物流,中间不经过二手商家,抵制恶意抬高水价,避免矿泉水造假.
-								</div>
-							</div>
-							<!-- /.box1 -->
-						</div>
-						<div class="metam2">
-							<!-- .box1 -->
-							<div class="box1">
-								<h2>超低的价格</h2>
-								<h4>在提供给消费者优质水的同时,保证销售价格最低</h4>
-								<p>我们的水直销给消费者,不经受中间商家<br>我们的矿泉水都是在半封闭环境下存储,避免阳光直射,避免在存储过程中的水质污染.<br></p>
-								<a href="#" class="read">Read more</a>
-							</div>
-							<!-- /.box1 -->
-						</div>
-					</div>
-				</div>
-			</div>
-			<div style="clear: both"></div>
-		</div>
-		<!-- close content_bg_repeat -->
-		<div id="content_bottom"></div>
-		<div id="footer_top">
-			<div id="footer_column1">
-				<h2>
-					<a href="">新闻动态</a>
-				</h2>
-				<div style="float: right">
-					<a href="" title="更多>>">更多&gt;&gt;</a>
-				</div>
-				<div class="footer_text">
-					<div class="foot_pad">
-						<ul class="ls">
-							<li><a href="#">价格让利，为消费者喝好水...<!-- 的习惯“买单” --></a></li>
-							<li><a href="#"><font color="red">好消息：</font>饮用水，盐汽水享超低价！
-							</a></li>
-							<li><a href="#">这个水业进入产业时代</a></li>
-							<li><a href="#">全球最贵矿泉水3000一瓶 上海买...</a></li>
-							<li><a href="#">关注幼儿园饮水动态</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div id="footer_column2">
-				<h2>
-					<a href="">招商加盟</a>
-				</h2>
-				<div style="float: right">
-					<a href="" title="更多>>">更多&gt;&gt;</a>
-				</div>
-				<div class="footer_text">
-					<div class="foot_pad">
-						<ul class="ls">
-							<li><a href="#">农夫山泉矿泉水</a></li>
-							<li><a href="#">益力矿泉水 </a></li>
-							<li><a href="#">娃哈哈纯净水 </a></li>
-							<li><a href="#">崂山矿泉水 </a></li>
-							<li><a href="#">云南山泉</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div id="footer_column3">
-				<div class="bottom_news">
-					<div>
-						<h2>
-							<a href="">饮水生活</a>
-						</h2>
-					</div>
-					<div style="float: right">
-						<a href="" title="更多>>">更多&gt;&gt;</a>
-					</div>
-				</div>
-
-				<div class="footer_text">
-					<div class="foot_pad">
-						<ul class="ls">
-							<li><a href="#">矿泉水是最好的保健品</a></li>
-							<li><a href="#">烧开的天然矿泉水产生水...<!-- 垢是否正常 -->
-							</a></li>
-							<li><a href="#">用硬币可以鉴别矿泉水</a></li>
-							<li><a href="#">巧用肥皂区别纯净水与...<!-- 矿泉水 --></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<jsp:include page="page_elements_jsp/page_footer.jsp"></jsp:include>
+		<!---End-image-slider---->
 	</div>
+	<!-- hot sale water -->
+	<div class="top_bg">
+		<div class="wrap">
+			<div class="main1">
+				<div class="image1_of_3">
+					<img src="images/img1.png" alt="" /> <a href="details.jsp"><span
+						class="tag">榜上榜</span></a>
+				</div>
+				<div class="image1_of_3">
+					<img src="images/img2.png" alt="" /> <a href="details.jsp"><span
+						class="tag">热卖中</span></a>
+				</div>
+				<div class="image1_of_3">
+					<img src="images/img3.png" alt="" /> <a href="details.jsp"><span
+						class="tag">不容错过</span></a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<!-- start main -->
+	<div class="main_bg">
+		<div class="wrap">
+			<jsp:include page="jsp/product-items.jsp"></jsp:include>
+		</div>
+	</div>
+	<!-- start footer -->
+	<jsp:include page="jsp/footer.jsp"></jsp:include>
+	<!-- start footer -->
+
 </body>
 </html>
