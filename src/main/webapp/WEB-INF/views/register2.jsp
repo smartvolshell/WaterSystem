@@ -4,7 +4,10 @@
 <html>
 <head>
 <title>欢迎您的加入...</title>
-<link rel="stylesheet" href="css/login_register_style.css" />
+<%
+	String basePath = request.getContextPath();
+%>
+<link rel="stylesheet" href="<%=basePath %>/css/login_register_style.css" />
 <body>
 
 	<div class="register-container">
@@ -14,7 +17,7 @@
 			<p>welcome to join us</p>
 		</div>
 
-		<form action="" method="post" id="registerForm">
+		<form action="<%=basePath %>/user/regist.html" method="post" id="registerForm">
 			<div>
 				<input type="text" name="username" class="username"
 					placeholder="您的用户名" autocomplete="off" />
@@ -46,13 +49,13 @@
 	</div>
 
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/common.js"></script>
+	<script src="<%=basePath %>/js/jquery.min.js"></script>
+	<script src="<%=basePath %>/js/common.js"></script>
 	<!--背景图片自动更换-->
-	<script src="js/supersized.3.2.7.min.js"></script>
-	<script src="js/supersized-init.js"></script>
+	<script src="<%=basePath %>/js/supersized.3.2.7.min.js"></script>
+	<script src="<%=basePath %>/js/supersized-init.js"></script>
 	<!--表单验证-->
-	<script src="js/jquery.validate.min.js?var1.14.0"></script>
+	<script src="<%=basePath %>/js/jquery.validate.min.js?var1.14.0"></script>
 
 </body>
 </html>

@@ -40,7 +40,7 @@
 </head>
 <body>
 	<!-- start header -->
-	<jsp:include page="jsp/header.jsp"></jsp:include>
+	<jsp:include page="basejsp/header.jsp"></jsp:include>
 	<!-- start header_btm -->
 	<!-- start top_bg -->
 	<div class="top_bg">
@@ -365,8 +365,8 @@
 		</div>
 	</div>
 	<!-- start footer -->
-	<jsp:include page="jsp/cooper-footer.jsp"></jsp:include>
-	<jsp:include page="jsp/footer.jsp"></jsp:include>
+	<jsp:include page="basejsp/cooper-footer.jsp"></jsp:include>
+	<jsp:include page="basejsp/footer.jsp"></jsp:include>
 	<!-- start footer -->
 </body>
 </html>

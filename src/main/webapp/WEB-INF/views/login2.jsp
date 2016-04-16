@@ -2,11 +2,14 @@
 	contentType="text/html;charset=GBK" pageEncoding="GBK"%>
 <html>
 <head>
+<%
+	String basePath = request.getContextPath();
+%>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>欢迎加入我们</title>
 
-<link rel="stylesheet" href="css/login_register_style.css" />
+<link rel="stylesheet" href="<%=basePath %>/css/login_register_style.css" />
 
 <body>
 
@@ -33,13 +36,13 @@
 
 </div>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/common.js"></script>
+<script src="<%=basePath %>/js/jquery.min.js"></script>
+<script src="<%=basePath %>/js/common.js"></script>
 <!--背景图片自动更换-->
-<script src="js/supersized.3.2.7.min.js"></script>
-<script src="js/supersized-init.js"></script>
+<script src="<%=basePath %>/js/supersized.3.2.7.min.js"></script>
+<script src="<%=basePath %>/js/supersized-init.js"></script>
 <!--表单验证-->
-<script src="js/jquery.validate.min.js?var1.14.0"></script>
+<script src="<%=basePath %>/js/jquery.validate.min.js?var1.14.0"></script>
 
 </body>
 </html>

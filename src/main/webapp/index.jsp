@@ -46,7 +46,7 @@
 </head>
 <body>
 	<!-- start header -->
-	<jsp:include page="jsp/header.jsp"></jsp:include>
+	<jsp:include page="basejsp/header.jsp"></jsp:include>
 	<!-- start header_btm -->
 
 	<!-- start slider -->
@@ -241,11 +241,11 @@
 	<!-- start main -->
 	<div class="main_bg">
 		<div class="wrap">
-			<jsp:include page="jsp/product-items.jsp"></jsp:include>
+			<jsp:include page="basejsp/product-items.jsp"></jsp:include>
 		</div>
 	</div>
 	<!-- start footer -->
-	<jsp:include page="jsp/footer.jsp"></jsp:include>
+	<jsp:include page="basejsp/footer.jsp"></jsp:include>
 	<!-- start footer -->
 
 </body>
