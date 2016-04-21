@@ -20,7 +20,7 @@
 		<p>join us</p>
 	</div>
 	
-	<form action="" method="post" id="loginForm">
+	<form action="login.html" method="get" id="loginForm">
 		<div>
 			<input type="text" name="username" class="username" placeholder="用户名" autocomplete="off"/>
 		</div>
@@ -36,13 +36,13 @@
 
 </div>
 
-<script src="<%=basePath %>/js/jquery.min.js"></script>
-<script src="<%=basePath %>/js/common.js"></script>
+<script src="<%=basePath %>/js/loginregister/jquery.min.js"></script>
+<script src="<%=basePath %>/js/loginregister/common.js"></script>
 <!--背景图片自动更换-->
-<script src="<%=basePath %>/js/supersized.3.2.7.min.js"></script>
-<script src="<%=basePath %>/js/supersized-init.js"></script>
+<script src="<%=basePath %>/js/loginregister/supersized.3.2.7.min.js"></script>
+<script src="<%=basePath %>/js/loginregister/supersized-init.js"></script>
 <!--表单验证-->
-<script src="<%=basePath %>/js/jquery.validate.min.js?var1.14.0"></script>
+<script src="<%=basePath %>/js/loginregister/jquery.validate.min.js?var1.14.0"></script>
 
 </body>
 </html>

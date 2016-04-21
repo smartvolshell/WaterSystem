@@ -12,11 +12,29 @@
 	http://www.springframework.org/schema/mvc/spring-mvc.xsd
 	">
 	<!-- 添加spring mvc注解驱动 -->
-	<mvc:annotation-driven />
+	<mvc:annotation-driven validator="validator" />
 	<!-- 搜索的控制类路径(C) -->
 	<context:component-scan base-package="com.volshell.*" />
+	<!-- 	===========================================
+			=                  使用hibernate扩展的数据校验                    =
+			=========================================== -->
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="providerClass" value="org.hibernate.validator.HibernateValidator" />
+		<!-- 默认加载classpath下面的 ValidationMessageSource.properites -->
+		<!-- defined at applicationContext.xml -->
+		<property name="validationMessageSource" ref="messageSource" />
+	</bean>
+		<!-- 	===========================================
+			    =               对静态资源的访问                                              =
+			    =========================================== -->
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<mvc:resources mapping="/images/**" location="/images/" />
+	<mvc:resources mapping="/js/**" location="/js/" />
 
-	<!-- 配置视图路径(V) -->
+		<!-- 	===========================================
+			    =              配置视图路径		                                              =
+			    =========================================== -->
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!-- 请求的前缀 -->
