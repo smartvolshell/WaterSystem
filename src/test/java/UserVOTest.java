@@ -1,9 +1,10 @@
-import com.volshell.watersystem.model.UserVO;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class UserVOTest {
 	public static void main(String[] args) {
-		UserVO user = new UserVO(1, "volshell", "123", "123", "fdjsaf");
-		System.out.println(user.toString());
-
+		ApplicationContext context = new ClassPathXmlApplicationContext(
+				new String[] { "classpath:spring-beans.xml", "classpath:spring-hibernate.xml" });
+		System.out.println(context == null);
 	}
 }

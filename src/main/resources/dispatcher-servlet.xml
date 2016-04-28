@@ -13,8 +13,8 @@
 	">
 	<!-- 添加spring mvc注解驱动 -->
 	<mvc:annotation-driven validator="validator" />
-	<!-- 搜索的控制类路径(C) -->
-	<context:component-scan base-package="com.volshell.*" />
+	<!-- 搜索的控制类路径,将@Controller的类转换为bean -->
+	<context:component-scan base-package="com.volshell" />
 	<!-- 	===========================================
 			=                  使用hibernate扩展的数据校验                    =
 			=========================================== -->

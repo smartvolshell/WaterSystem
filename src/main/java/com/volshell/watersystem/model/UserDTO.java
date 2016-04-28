@@ -1,27 +1,48 @@
 package com.volshell.watersystem.model;
 
-public class UserVO {
+import java.io.Serializable;
 
-	private String confirmPassword;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "user")
+public class UserDTO implements Serializable {
+
+	private static final long serialVersionUID = -3030791368927125403L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "u_id")
+	private Integer id;
+	@Column(name = "u_pass")
 	private String password;
+	@Column(name = "u_email")
 	private String userEmail;
+	@Column(name = "u_name")
 	private String username;
+	@Column(name = "u_tel")
 	private String phoneNumber;
 
-	public UserVO() {
+	public UserDTO() {
 		super();
 	}
 
-	public UserVO(String username, String password, String phoneNumber, String userEmail) {
+	public UserDTO(Integer id, String username, String password, String phoneNumber, String userEmail) {
 		super();
+		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.phoneNumber = phoneNumber;
 		this.userEmail = userEmail;
 	}
 
-	public String getConfirmPassword() {
-		return confirmPassword;
+	public Integer getId() {
+		return id;
 	}
 
 	public String getPassword() {
@@ -40,8 +61,8 @@ public class UserVO {
 		return phoneNumber;
 	}
 
-	public void setConfirmPassword(String confirmPassword) {
-		this.confirmPassword = confirmPassword;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public void setPassword(String password) {
