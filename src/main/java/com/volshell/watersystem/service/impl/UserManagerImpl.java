@@ -17,14 +17,12 @@ public class UserManagerImpl implements UserManager {
 	UserDAO userDAO;
 
 	public void save(UserVO user) {
-
 		userDAO.save(transfer(user));
-
 	}
 
 	public List<UserDTO> getUserByName(String username) {
 		// TODO Auto-generated method stub
-		return null;
+		return userDAO.findByProperty(username);
 	}
 
 	private UserDTO transfer(UserVO user) {

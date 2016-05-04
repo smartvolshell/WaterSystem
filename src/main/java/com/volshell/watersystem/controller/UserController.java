@@ -1,6 +1,7 @@
 package com.volshell.watersystem.controller;
 
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -10,11 +11,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.volshell.watersystem.model.UserDTO;
 import com.volshell.watersystem.model.UserVO;
 import com.volshell.watersystem.service.UserManager;
 
@@ -59,17 +60,17 @@ public class UserController {
 
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		boolean isLegal = StringUtils.hasLength(username) && StringUtils.hasLength(password);
-
-		if (!isLegal) {
-			model.put("message", "用户名或密码不能为空");
-			return new ModelAndView("login2");
-		}
 		// 用户名和密码编码统一
 		try {
 			username = new String(username.getBytes("iso-8859-1"), "utf-8");
 			password = new String(password.getBytes("iso-8859-1"), "utf-8");
-
+			List<UserDTO> users = userManager.getUserByName(username);
+			if (users != null && users.get(0).getPassword().equals(password)) {
+				model.put("message", "登录成功");
+			} else {
+				model.put("message", "登录失败");
+				return null;
+			}
 			// 保存登录信息
 			request.getSession().setAttribute("username", username);
 		} catch (UnsupportedEncodingException e) {
@@ -78,7 +79,7 @@ public class UserController {
 		} /**
 			 * 添加登录处理逻辑
 			 */
-		return new ModelAndView("login2");
+		return new ModelAndView("redirect:/index.jsp");
 	}
 
 	@RequestMapping(value = "/logout.html", method = RequestMethod.GET)

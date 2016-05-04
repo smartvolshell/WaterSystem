@@ -59,8 +59,17 @@ public class UserDAOImpl implements UserDAO {
 	}
 
 	public List<UserDTO> findByProperty(Serializable property) {
-		// TODO Auto-generated method stub
-		return null;
+		String username = (String) property;
+		session = sessionFactory.openSession();
+		transaction = session.beginTransaction();
+		// List<UserDTO> users = session.load(UserDTO.class, username);
+		@SuppressWarnings("unchecked")
+		List<UserDTO> users = session.createQuery("select distinct user  from UserDTO user  where username = :username")
+																.setString("username", username)
+																.list();
+		transaction.commit();
+		close();
+		return users;
 	}
 
 	private void close() {

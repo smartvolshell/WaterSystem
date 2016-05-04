@@ -9,5 +9,5 @@ public interface UserManager {
 	public abstract void save(UserVO user);
 
 	public abstract List<UserDTO> getUserByName(String username);
-
+	
 }
